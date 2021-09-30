@@ -1,0 +1,4 @@
+#Sat Sep 18 10:53:10 KST 2021
+base.0=/Users/30ML/flutter_ex/flutter_ex_recipe/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
