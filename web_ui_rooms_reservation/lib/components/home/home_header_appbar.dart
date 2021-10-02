@@ -36,6 +36,7 @@ class HomeHeaderAppBar extends StatelessWidget {
   Widget _buildAppBarMenu() {
     return Row(
       children: [
+        // 클릭 이벤트 필요 시 InkWell 이나 TextButton 위젯 사용
         Text('회원가입', style: subtitle1(mColor: Colors.white)),
         SizedBox(width: gap_m),
         Text('로그인', style: subtitle1(mColor: Colors.white)),
