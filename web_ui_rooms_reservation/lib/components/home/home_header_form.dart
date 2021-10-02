@@ -16,7 +16,7 @@ class HomeHeaderForm extends StatelessWidget {
           width: 420,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(2),
+            borderRadius: BorderRadius.circular(20),
           ),
           child: Form(
             child: Padding(
@@ -65,6 +65,7 @@ class HomeHeaderForm extends StatelessWidget {
                 hintText: '날짜 입력',
               ),
             ),
+            SizedBox(width: gap_s),
             Expanded(
               child: CommonFormField(
                 prefixText: '체크아웃',
@@ -82,6 +83,7 @@ class HomeHeaderForm extends StatelessWidget {
                 hintText: '2',
               ),
             ),
+            SizedBox(width: gap_s),
             Expanded(
               child: CommonFormField(
                 prefixText: '어린이',
