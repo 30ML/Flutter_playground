@@ -176,13 +176,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "flutter_ui_login",
+      "name": "m_ui_login",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-09-22T07:15:24.286652Z",
+  "generated": "2021-09-30T23:58:20.882624Z",
   "generator": "pub",
   "generatorVersion": "2.14.2"
 }

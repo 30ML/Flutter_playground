@@ -1,3 +1,7 @@
+m_ui_login
+2.12
+file:///Users/30ML/Flutter_playground/m-ui_login/
+file:///Users/30ML/Flutter_playground/m-ui_login/lib/
 async
 2.12
 file:///Users/30ML/development/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.1/
@@ -114,8 +118,4 @@ flutter_test
 2.12
 file:///Users/30ML/development/flutter/packages/flutter_test/
 file:///Users/30ML/development/flutter/packages/flutter_test/lib/
-flutter_ui_login
-2.12
-file:///Users/30ML/flutter_ex/flutter_ui_login/
-file:///Users/30ML/flutter_ex/flutter_ui_login/lib/
 2
