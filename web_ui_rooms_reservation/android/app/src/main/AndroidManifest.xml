@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.w_ui_rooms_reservation">
+    package="com.example.web_ui_rooms_reservation">
    <application
-        android:label="w_ui_rooms_reservation"
+        android:label="web_ui_rooms_reservation"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

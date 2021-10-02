@@ -1,6 +1,6 @@
 {
-    "name": "w_ui_rooms_reservation",
-    "short_name": "w_ui_rooms_reservation",
+    "name": "web_ui_rooms_reservation",
+    "short_name": "web_ui_rooms_reservation",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
