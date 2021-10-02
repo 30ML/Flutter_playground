@@ -7,11 +7,14 @@ import 'package:web_ui_rooms_reservation/components/common/common_form_field.dar
 class HomeHeaderForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Padding(
       padding: const EdgeInsets.only(top: gap_m),
       child: Align(
         // -1.0 부터 1.0까지 가로 범위에서 0.1의 값은 5%
-        alignment: Alignment(-0.6, 0),
+        // alignment: Alignment(-0.6, 0),
+        alignment: screenWidth < 520 ? Alignment(0, 0) : Alignment(-0.6, 0),
         child: Container(
           width: 420,
           decoration: BoxDecoration(
@@ -24,7 +27,9 @@ class HomeHeaderForm extends StatelessWidget {
               child: Column(
                 children: [
                   _buildFormTitle(),
+                  SizedBox(height: gap_m),
                   _buildFormField(),
+                  SizedBox(height: gap_m),
                   _buildFormSubmit(),
                 ],
               ),
@@ -44,7 +49,6 @@ class HomeHeaderForm extends StatelessWidget {
           '혼자하는 여행에 적합한 개인실부터 여럿이 함께하는 여행에 좋은 \'공간전체\' 숙소까지, 모두의숙소에 다 있습니다.',
           style: body1(),
         ),
-        SizedBox(height: gap_m),
       ],
     );
   }
@@ -92,7 +96,6 @@ class HomeHeaderForm extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: gap_m),
       ],
     );
   }
