@@ -11,7 +11,7 @@ class User {
 }
 
 final String _urlPrefix =
-    'https://raw.githubsercontent.com/flutter-coder/ui-images/master/messenger';
+    'https://raw.githubusercontent.com/flutter-coder/ui_images/master/messenger';
 
 User me = User(
   backgroundImage: '${_urlPrefix}_me.jpg',
