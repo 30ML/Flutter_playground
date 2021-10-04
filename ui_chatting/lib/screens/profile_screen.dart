@@ -42,6 +42,12 @@ class ProfileScreen extends StatelessWidget {
             SizedBox(width: 15),
           ],
         ),
+        body: Column(
+          children: [
+            Spacer(),
+            if (user.name == me.name) _buildMyIcons() else _buildFriendIcons(),
+          ],
+        ),
       ),
     );
   }
