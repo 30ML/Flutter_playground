@@ -146,13 +146,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_ex_recipe",
+      "name": "ui_recipe",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-09-17T08:16:26.633814Z",
+  "generated": "2021-10-04T14:53:33.236564Z",
   "generator": "pub",
-  "generatorVersion": "2.14.0"
+  "generatorVersion": "2.14.2"
 }

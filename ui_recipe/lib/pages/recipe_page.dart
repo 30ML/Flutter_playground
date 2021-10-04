@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_ex_recipe/components/recipe_title.dart';
-import 'package:flutter_ex_recipe/components/recipe_menu.dart';
-import 'package:flutter_ex_recipe/components/recipe_list_item.dart';
+import 'package:ui_recipe/components/recipe_title.dart';
+import 'package:ui_recipe/components/recipe_menu.dart';
+import 'package:ui_recipe/components/recipe_list_item.dart';
 
 class RecipePage extends StatelessWidget {
   @override
