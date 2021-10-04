@@ -45,6 +45,30 @@ class ProfileScreen extends StatelessWidget {
         body: Column(
           children: [
             Spacer(),
+            Container(
+              width: 110,
+              height: 110,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: NetworkImage(user.backgroundImage),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            SizedBox(height: 8),
+            Text(
+              user.name,
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+            SizedBox(height: 5),
+            Text(
+              user.intro,
+              style: TextStyle(color: Colors.white, fontSize: 15),
+              maxLines: 1,
+            ),
+            SizedBox(height: 20),
+            Divider(color: Colors.white),
             if (user.name == me.name) _buildMyIcons() else _buildFriendIcons(),
           ],
         ),
