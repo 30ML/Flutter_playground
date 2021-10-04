@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ui_chatting/screens/chat_screen.dart';
+import 'package:ui_chatting/screens/friend_screen.dart';
+import 'package:ui_chatting/screens/more_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -15,9 +18,9 @@ class _MainScreenState extends State<MainScreen> {
       body: IndexedStack(
         index: _selectedIndex,
         children: [
-          Center(child: Text('IndexedStack 1')),
-          Center(child: Text('IndexedStack 2')),
-          Center(child: Text('IndexedStack 3')),
+          FriendScreen(),
+          ChatScreen(),
+          MoreScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
