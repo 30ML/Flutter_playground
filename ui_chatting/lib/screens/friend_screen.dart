@@ -17,7 +17,11 @@ class FriendScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Row(
               children: [
-                Text('친구'),
+                Text(
+                  '친구',
+                  style: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                ),
                 const SizedBox(width: 6),
                 Text('${friends.length}'),
               ],
