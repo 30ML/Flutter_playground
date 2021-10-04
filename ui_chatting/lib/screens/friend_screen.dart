@@ -19,7 +19,7 @@ class FriendScreen extends StatelessWidget {
               children: [
                 Text('친구'),
                 const SizedBox(width: 6),
-                Text('${friends.length}')
+                Text('${friends.length}'),
               ],
             ),
           ),
