@@ -7,7 +7,10 @@ class FriendScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text('친구')),
+      appBar: AppBar(
+        title: Text('친구',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+      ),
       body: Column(
         children: [
           const SizedBox(height: 10),
@@ -17,11 +20,7 @@ class FriendScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Row(
               children: [
-                Text(
-                  '친구',
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.bold),
-                ),
+                Text('친구'),
                 const SizedBox(width: 6),
                 Text('${friends.length}'),
               ],
