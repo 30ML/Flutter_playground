@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ui_chatting/models/user.dart';
 
-class Profile extends StatelessWidget {
-  const Profile({
+class ProfileCard extends StatelessWidget {
+  const ProfileCard({
     Key? key,
     required this.user,
   }) : super(key: key);
