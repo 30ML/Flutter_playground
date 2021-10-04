@@ -19,7 +19,7 @@ User me = User(
   intro: '어떻게 사는지 좋을지 몰라서',
 );
 
-List<User> firends = [
+List<User> friends = [
   User(
     backgroundImage: '${_urlPrefix}_man_1.jpg',
     name: '김철수',
