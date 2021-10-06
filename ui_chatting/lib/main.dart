@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
           textTheme: TextTheme(
             headline6: TextStyle(color: Colors.black, fontSize: 24),
-          ),
+          ), // App Bar 텍스트 테마
           iconTheme: IconThemeData(color: Colors.black),
         ),
       ),
