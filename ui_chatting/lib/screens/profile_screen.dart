@@ -44,7 +44,7 @@ class ProfileScreen extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Spacer(),
+            Spacer(), // TODO: 확인 필요
             Container(
               width: 110,
               height: 110,
