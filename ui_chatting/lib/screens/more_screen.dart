@@ -11,6 +11,7 @@ class MoreScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(top: 30),
         child: GridView.count(
+          // GridView: 그리드 형식으로 위젯 배치
           crossAxisCount: 4, // 한 줄에 아이템 4개
           children: List.generate(
             tabs.length,
