@@ -1,6 +1,6 @@
 # business_card
 
-간단한 명함 앱
+Simple Business Card Application
 
 ## Getting Started
 
