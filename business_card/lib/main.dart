@@ -5,11 +5,9 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Hello World!',
-        textDirection: TextDirection.ltr,
-      ),
+    return MaterialApp(
+      title: 'Business Card',
+      home: Center(child: Text('Hello World! This is 30MLX')),
     );
   }
 }
