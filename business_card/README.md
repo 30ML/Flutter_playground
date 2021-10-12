@@ -5,4 +5,5 @@
 ## Getting Started
 
 $ flutter pub get
+
 $ flutter run
