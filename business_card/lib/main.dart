@@ -13,13 +13,32 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.deepPurple,
         ),
         body: Center(
-          child: Text(
-            'Hello World! This is 30MLX',
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
-              color: Colors.blue[800],
-            ),
+          child: Column(
+            children: [
+              Text(
+                'Ryan Kim',
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue[800],
+                ),
+              ),
+              Text(
+                'Flutter Developer',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.deepPurpleAccent,
+                ),
+              ),
+              Image.network(
+                'https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif',
+                height: 350,
+              ),
+              ElevatedButton(
+                child: Text('Contact Us'),
+                onPressed: () => true,
+              ),
+            ],
           ),
         ),
       ),
