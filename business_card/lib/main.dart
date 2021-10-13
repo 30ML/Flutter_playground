@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('30ML'),
+          backgroundColor: Colors.deepPurple,
         ),
         body: Center(
           child: Text(
