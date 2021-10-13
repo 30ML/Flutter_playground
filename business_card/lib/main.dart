@@ -12,7 +12,14 @@ class MyApp extends StatelessWidget {
           title: Text('30ML'),
         ),
         body: Center(
-          child: Text('Hello World! This is 30MLX'),
+          child: Text(
+            'Hello World! This is 30MLX',
+            style: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+              color: Colors.blue[800],
+            ),
+          ),
         ),
       ),
     );
