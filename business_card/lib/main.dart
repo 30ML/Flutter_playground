@@ -44,4 +44,22 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
+  void contactUs(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Contact Us'),
+          content: Text('Mail us at hello@world.com'),
+          actions: [
+            FlatButton(
+              child: Text('Close'),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
+          ],
+        );
+      },
+    );
+  }
 }
