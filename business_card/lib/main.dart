@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('Contact Us'),
-          content: Text('Mail us at hello@world.com'),
+          content: Text('Mail us at dev.30mlx@gmail.com'),
           actions: [
             FlatButton(
               child: Text('Close'),
