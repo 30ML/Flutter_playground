@@ -6,7 +6,7 @@ ThemeData theme() {
   return ThemeData(
     scaffoldBackgroundColor: Colors.white,
     textTheme: textTheme(),
-    appBarTheme: appTheme(),
+    appBarTheme: appBarTheme(),
     primaryColor: Colors.orange,
   );
 }
@@ -22,17 +22,18 @@ TextTheme textTheme() {
   );
 }
 
-AppBarTheme appTheme() {
+AppBarTheme appBarTheme() {
   return AppBarTheme(
     centerTitle: false,
     color: Colors.white,
     elevation: 0.0,
-    textTheme: TextTheme(
-      headline1: GoogleFonts.nanumGothic(
-        fontSize: 16.0,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-      ),
+    titleTextStyle: GoogleFonts.nanumGothic(
+      fontSize: 16.0,
+      fontWeight: FontWeight.bold,
+      color: Colors.black,
+    ),
+    actionsIconTheme: const IconThemeData(
+      color: Colors.black,
     ),
   );
 }

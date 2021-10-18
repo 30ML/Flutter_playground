@@ -15,10 +15,10 @@ class HomeScreen extends StatelessWidget {
             const Icon(
               CupertinoIcons.chevron_down,
               size: 15.0,
+              color: Colors.black,
             ),
           ],
         ),
-        // Text('HomeScreen AppBar Area(index: 0)',
         actions: [
           IconButton(icon: const Icon(CupertinoIcons.search), onPressed: () {}),
           IconButton(
