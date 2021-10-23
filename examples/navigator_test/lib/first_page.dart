@@ -19,6 +19,13 @@ class _FirstPageState extends State<FirstPage> {
     todoList.add('부모님께 전화하기');
   }
 
+  void _addNavigation(BuildContext context) async {
+    final result = await Navigator.of(context).pushNamed('/second');
+    setState(() {
+      todoList.add(result as String);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +51,9 @@ class _FirstPageState extends State<FirstPage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          _addNavigation(context);
+        },
       ),
       // body: Center(
       //   child: ElevatedButton(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {
+  TextEditingController controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,11 +10,19 @@ class SecondPage extends StatelessWidget {
         title: const Text('Second Page'),
       ),
       body: Center(
-        child: ElevatedButton(
-          child: const Text('Go to Third Page'),
-          onPressed: () {
-            Navigator.of(context).pushReplacementNamed('/third');
-          },
+        child: Column(
+          children: [
+            TextField(
+              controller: controller,
+              keyboardType: TextInputType.text,
+            ),
+            ElevatedButton(
+              child: const Text('저장하기'),
+              onPressed: () {
+                Navigator.of(context).pop(controller.value.text);
+              },
+            ),
+          ],
         ),
       ),
     );
