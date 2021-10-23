@@ -25,14 +25,35 @@ class _FirstPageState extends State<FirstPage> {
       appBar: AppBar(
         title: const Text('First Page'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Go to second page'),
-          onPressed: () {
-            Navigator.of(context).pushNamed('/second');
-          },
-        ),
+      body: ListView.builder(
+        itemCount: todoList.length,
+        itemBuilder: (context, index) {
+          return Card(
+            child: InkWell(
+              child: Text(
+                todoList[index],
+                style: const TextStyle(fontSize: 30),
+              ),
+              onTap: () {
+                Navigator.of(context)
+                    .pushNamed('/third', arguments: todoList[index]);
+              },
+            ),
+          );
+        },
       ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {},
+      ),
+      // body: Center(
+      //   child: ElevatedButton(
+      //     child: const Text('Go to second page'),
+      //     onPressed: () {
+      //       Navigator.of(context).pushNamed('/second');
+      //     },
+      //   ),
+      // ),
     );
   }
 }
