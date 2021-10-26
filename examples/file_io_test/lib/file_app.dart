@@ -122,5 +122,11 @@ class _FileAppState extends State<FileApp> {
     return itemList;
   }
 
-  void writeFruit(String fruit) async {}
+  void writeFruit(String fruit) async {
+    var fruitFileDirPath =
+        (await getApplicationDocumentsDirectory()).path + '/fruit';
+    var file = await File(fruitFileDirPath).readAsString();
+    file = file + '\n' + fruit;
+    File(fruitFileDirPath).writeAsStringSync(file);
+  }
 }
