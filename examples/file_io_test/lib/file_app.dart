@@ -55,10 +55,10 @@ class _FileAppState extends State<FileApp> {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
+          writeFruit(controller.value.text);
           setState(() {
-            _count++;
+            itemList.add(controller.value.text);
           });
-          writeCountFile(_count);
         },
       ),
     );
@@ -124,7 +124,7 @@ class _FileAppState extends State<FileApp> {
 
   void writeFruit(String fruit) async {
     var fruitFileDirPath =
-        (await getApplicationDocumentsDirectory()).path + '/fruit';
+        (await getApplicationDocumentsDirectory()).path + '/fruit.txt';
     var file = await File(fruitFileDirPath).readAsString();
     file = file + '\n' + fruit;
     File(fruitFileDirPath).writeAsStringSync(file);
