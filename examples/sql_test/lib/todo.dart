@@ -12,7 +12,7 @@ class Todo {
       'id': id,
       'title': title,
       'content': content,
-      'active': done,
+      'done': done,
     };
   }
 }

@@ -13,14 +13,14 @@ class AddTodoApp extends StatefulWidget {
 
 class _AddTodoAppState extends State<AddTodoApp> {
   TextEditingController? titleController;
-  TextEditingController? contextController;
+  TextEditingController? contentController;
 
   @override
   void initState() {
     super.initState();
 
     titleController = TextEditingController();
-    contextController = TextEditingController();
+    contentController = TextEditingController();
   }
 
   @override
@@ -31,7 +31,33 @@ class _AddTodoAppState extends State<AddTodoApp> {
       ),
       body: Center(
         child: Column(
-          children: [],
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                controller: titleController,
+                decoration: const InputDecoration(labelText: 'Title'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                controller: contentController,
+                decoration: const InputDecoration(labelText: 'Task'),
+              ),
+            ),
+            ElevatedButton(
+              child: const Text('Save'),
+              onPressed: () {
+                Todo todo = Todo(
+                  title: titleController?.value.text,
+                  content: contentController?.value.text,
+                  done: 0,
+                );
+                Navigator.of(context).pop(todo);
+              },
+            ),
+          ],
         ),
       ),
     );
