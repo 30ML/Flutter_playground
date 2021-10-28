@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,14 +17,46 @@ class MyApp extends StatelessWidget {
 }
 
 class TimerHomePage extends StatelessWidget {
+  final double defaultPadding = 5.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Work Timer'),
       ),
-      body: const Center(
-        child: Text('Work Timer'),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Padding(padding: EdgeInsets.all(defaultPadding)),
+              Expanded(
+                child: ProductivityButton(
+                  color: const Color(0xff009688),
+                  text: 'Work',
+                  onPressed: () {},
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(defaultPadding)),
+              Expanded(
+                child: ProductivityButton(
+                  color: const Color(0xff607D8B),
+                  text: 'Short Break',
+                  onPressed: () {},
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(defaultPadding)),
+              Expanded(
+                child: ProductivityButton(
+                  color: const Color(0xff455A64),
+                  text: 'Long Break',
+                  onPressed: () {},
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(defaultPadding)),
+            ],
+          ),
+        ],
       ),
     );
   }
