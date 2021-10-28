@@ -10,13 +10,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Work Timer'),
-        ),
-        body: const Center(
-          child: Text('Work Timer'),
-        ),
+      home: TimerHomePage(),
+    );
+  }
+}
+
+class TimerHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Work Timer'),
+      ),
+      body: const Center(
+        child: Text('Work Timer'),
       ),
     );
   }
