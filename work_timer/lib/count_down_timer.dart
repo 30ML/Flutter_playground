@@ -15,6 +15,10 @@ class CountDownTimer {
     _fullTime = _time;
   }
 
+  void stopTimer() {
+    _isActive = false;
+  }
+
   /* Stream은 제네릭이므로 모든 타입의 Stream을 반환할 수 있음 */
   // TimerModel의 Stream을 반환하는 함수
   Stream<TimerModel> stream() async* {
