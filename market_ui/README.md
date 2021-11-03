@@ -7,3 +7,8 @@
 3. main_screen.dart 기본 코드 입력
 4. 앱 theme 설정
 5. main.dart 파일 완성
+
+# Added Package
+* font_awesome_flutter
+* google_fonts
+* intl
