@@ -22,7 +22,7 @@ AppBarTheme appbarTheme() {
     centerTitle: false,
     color: Colors.white,
     elevation: 0.0,
-    // toolbarTextStyle: [textStyle]
+    // toolbarTextStyle: [textStyle] -> Appbar의 title 제외 나머지 스타일
     toolbarTextStyle: GoogleFonts.nanumGothic(
       fontSize: 16,
       fontWeight: FontWeight.bold,
