@@ -6,9 +6,9 @@
 2. pubspec.yaml 파일 설정
 3. MainScreens 위젝 기본 코드 작성(1)
 4. 앱 theme 설정
-5. main.dart 파일 완성
+5. main.dart 기본 코드 작성(1)
 6. MainScreens 위젯 기본 코드 작성(2)
-7. primaryColor 설정
+7. primarySwatch 설정
 8. IndexedStack 하위 위젯 생성
 9. MainScreens 위젯 완성
 
