@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:used_market_ui/screens/chat/chat_screen.dart';
-import 'package:used_market_ui/screens/heighborhood_life/neighborhood_life_screen.dart';
-import 'package:used_market_ui/screens/home/home_screen.dart';
-import 'package:used_market_ui/screens/my_page/my_page_screen.dart';
-import 'package:used_market_ui/screens/near_me/near_me_screen.dart';
+import 'package:carrot_market_ui/screens/chat/chat_screen.dart';
+import 'package:carrot_market_ui/screens/heighborhood_life/neighborhood_life_screen.dart';
+import 'package:carrot_market_ui/screens/home/home_screen.dart';
+import 'package:carrot_market_ui/screens/my_carrot/my_carrot_screen.dart';
+import 'package:carrot_market_ui/screens/near_me/near_me_screen.dart';
 
 class MainScreens extends StatefulWidget {
   @override
@@ -26,7 +26,7 @@ class _MainScreensState extends State<MainScreens> {
           NeighbothoodLifeScreen(),
           NearMeScreen(),
           ChatScreen(),
-          MyPageScreen(),
+          MyCarrotScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -44,7 +44,7 @@ class _MainScreensState extends State<MainScreens> {
             icon: Icon(CupertinoIcons.home),
           ),
           BottomNavigationBarItem(
-            label: '동네 생활',
+            label: '동네생활',
             icon: Icon(CupertinoIcons.square_on_square),
           ),
           BottomNavigationBarItem(
@@ -56,7 +56,7 @@ class _MainScreensState extends State<MainScreens> {
             icon: Icon(CupertinoIcons.chat_bubble),
           ),
           BottomNavigationBarItem(
-            label: '나의 정보',
+            label: '나의 당근',
             icon: Icon(CupertinoIcons.person),
           ),
         ],

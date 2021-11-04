@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:used_market_ui/theme.dart';
-import 'package:used_market_ui/screens/main_screens.dart';
+import 'package:carrot_market_ui/theme.dart';
+import 'package:carrot_market_ui/screens/main_screens.dart';
 
 void main() => runApp(UsedMarketUI());
 
