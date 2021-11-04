@@ -11,6 +11,11 @@
 7. primarySwatch 설정
 8. IndexedStack 하위 위젯 생성
 9. MainScreens 위젯 완성
+10. HomeScreen 위젯 기본 코드 작성
+11. AppBar 작성
+12. 화면에 사용할 샘플 데이터 작성
+13. 독립된 파일로 위젯 작성
+14. HomeScreen 위젯 완성
 
 
 # Added Package
