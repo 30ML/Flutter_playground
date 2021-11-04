@@ -1,6 +1,14 @@
 # Market_ui
 중고거래 모바일 서비스 앱 UI project (당근마켓 clone)
 
+# Added Package
+* font_awesome_flutter
+* google_fonts
+* intl
+
+# 특이 사항
+* AppBar는 각 화면마다 따로 생성함
+
 # work flow
 1. 폴더 및 파일 생성
 2. pubspec.yaml 파일 설정
@@ -16,9 +24,3 @@
 12. 화면에 사용할 샘플 데이터 작성
 13. 독립된 파일로 위젯 작성
 14. HomeScreen 위젯 완성
-
-
-# Added Package
-* font_awesome_flutter
-* google_fonts
-* intl
