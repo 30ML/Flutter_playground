@@ -76,7 +76,19 @@ class MyCarrotHeader extends StatelessWidget {
   }
 
   Widget _buildProfileButton() {
-    return Container(color: Colors.blue[100], height: 45);
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: const Color(0xFFD4D5DD), width: 1),
+          borderRadius: BorderRadius.circular(6.0),
+        ),
+        height: 45,
+        child: Center(
+          child: Text('프로필 보기', style: textTheme().subtitle1),
+        ),
+      ),
+    );
   }
 
   Widget _buildRoundTextButton(String title, IconData iconData) {
