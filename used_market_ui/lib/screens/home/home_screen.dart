@@ -1,6 +1,7 @@
 // BottomNavigationBarItem의 '홈' 아이콘(Home)을 눌렀을 때 나타날 위젯
 
-import 'package:carrot_market_ui/theme.dart';
+import 'package:carrot_market_ui/models/product.dart';
+import 'package:carrot_market_ui/screens/components/product_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -35,13 +36,15 @@ class HomeScreen extends StatelessWidget {
           child: Divider(thickness: 0.5, height: 0.5, color: Colors.grey),
         ),
       ),
-      body: Container(
-        color: Colors.orange[100],
-        child: Center(
-          child: Text(
-            'HomeScreen Body 영역 (index: 0)',
-            style: textTheme().headline2,
-          ),
+      body: ListView.separated(
+        itemCount: productList.length,
+        itemBuilder: (context, index) =>
+            ProductItem(product: productList[index]),
+        separatorBuilder: (context, index) => const Divider(
+          height: 0,
+          color: Colors.grey,
+          indent: 16,
+          endIndent: 16,
         ),
       ),
     );
