@@ -92,6 +92,21 @@ class MyCarrotHeader extends StatelessWidget {
   }
 
   Widget _buildRoundTextButton(String title, IconData iconData) {
-    return Container(color: Colors.orange[100], height: 60, width: 60);
+    return Column(
+      children: [
+        Container(
+          width: 60,
+          height: 60,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            color: const Color.fromRGBO(255, 226, 208, 1),
+            border: Border.all(color: const Color(0xFFD4D5DD), width: 0.5),
+          ),
+          child: Icon(iconData, color: Colors.orange),
+        ),
+        const SizedBox(height: 10),
+        Text(title, style: textTheme().subtitle1),
+      ],
+    );
   }
 }
