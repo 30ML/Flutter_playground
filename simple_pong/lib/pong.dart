@@ -18,11 +18,12 @@ class _PongState extends State<Pong> {
 
   @override
   Widget build(BuildContext context) {
+    // 화면 크기에 따라 크기를 변경 시키기 위해 LayoutBuilder 사용
     return LayoutBuilder(builder: (context, constraints) {
       height = constraints.maxHeight;
       width = constraints.maxWidth;
-      batWidth = width / 5;
-      batHeight = height / 20;
+      batWidth = width / 5; // 부모 위젯 height의 1/5
+      batHeight = height / 20; // 부모 위젯 width의 1/20
 
       return Stack(
         children: [
