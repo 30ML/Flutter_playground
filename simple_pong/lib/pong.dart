@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'ball.dart';
 import 'bat.dart';
 
+enum Direction { up, down, left, right }
+
 class Pong extends StatefulWidget {
   @override
   _PongState createState() => _PongState();
 }
 
-class _PongState extends State<Pong> {
+class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
   double width = 0; // 화면에서 사용 가능한 가로 길이
   double height = 0; // 화면에서 사용 가능한 세로 길이
   double posX = 0; // 공의 수평 위치
@@ -15,6 +17,52 @@ class _PongState extends State<Pong> {
   double batWidth = 0; // 막대 너비
   double batHeight = 0; // 막대 높이
   double batPosition = 0; // 막대의 (수평) 위치
+  double increment = 5; // 증분 - 공의 속도
+
+  Direction vDir = Direction.down;
+  Direction hDir = Direction.right;
+
+  Animation<double>? animation;
+  AnimationController? controller;
+
+  @override
+  void initState() {
+    posX = 0;
+    posY = 0;
+
+    controller = AnimationController(
+      duration: const Duration(minutes: 10000),
+      vsync: this,
+    );
+
+    animation = Tween<double>(begin: 0, end: 100).animate(controller!);
+    animation!.addListener(() {
+      setState(() {
+        (hDir == Direction.right) ? posX += increment : posX -= increment;
+        (vDir == Direction.down) ? posY += increment : posY -= increment;
+      });
+      checkBorders();
+    });
+
+    controller!.forward();
+
+    super.initState();
+  }
+
+  void checkBorders() {
+    if (posX <= 0 && hDir == Direction.left) {
+      hDir = Direction.right;
+    }
+    if (posX >= width - 50 && hDir == Direction.right) {
+      hDir = Direction.left;
+    }
+    if (posY >= height - 50 && vDir == Direction.down) {
+      vDir = Direction.up;
+    }
+    if (posY <= 0 && vDir == Direction.up) {
+      vDir = Direction.down;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +77,26 @@ class _PongState extends State<Pong> {
         children: [
           Positioned(
             child: Ball(),
-            top: 0,
+            top: posY,
+            left: posX,
           ),
           Positioned(
-            child: Bat(batWidth, batHeight),
+            child: GestureDetector(
+              onHorizontalDragUpdate: (DragUpdateDetails update) =>
+                  moveBat(update),
+              child: Bat(batWidth, batHeight),
+            ),
             bottom: 0,
+            left: batPosition,
           ),
         ],
       );
+    });
+  }
+
+  void moveBat(DragUpdateDetails update) {
+    setState(() {
+      batPosition += update.delta.dx;
     });
   }
 }
