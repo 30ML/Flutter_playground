@@ -37,7 +37,7 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
 
     animation = Tween<double>(begin: 0, end: 100).animate(controller!);
     animation!.addListener(() {
-      setState(() {
+      safeSetState(() {
         (hDir == Direction.right) ? posX += increment : posX -= increment;
         (vDir == Direction.down) ? posY += increment : posY -= increment;
       });
@@ -54,21 +54,6 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
     controller!.dispose();
 
     super.dispose();
-  }
-
-  void checkBorders() {
-    if (posX <= 0 && hDir == Direction.left) {
-      hDir = Direction.right;
-    }
-    if (posX >= width - 50 && hDir == Direction.right) {
-      hDir = Direction.left;
-    }
-    if (posY >= height - 50 && vDir == Direction.down) {
-      vDir = Direction.up;
-    }
-    if (posY <= 0 && vDir == Direction.up) {
-      vDir = Direction.down;
-    }
   }
 
   @override
@@ -101,9 +86,38 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
     });
   }
 
+  void checkBorders() {
+    double diameter = 50; // 공의 지름
+
+    if (posX <= 0 && hDir == Direction.left) {
+      hDir = Direction.right;
+    }
+    if (posX >= width - diameter && hDir == Direction.right) {
+      hDir = Direction.left;
+    }
+    if (posY >= height - diameter && vDir == Direction.down) {
+      if (posX >= (batPosition - diameter) &&
+          posX <= (batPosition + batWidth + diameter)) {
+        vDir = Direction.up;
+      } else {
+        controller!.stop();
+        dispose();
+      }
+    }
+    if (posY <= 0 && vDir == Direction.up) {
+      vDir = Direction.down;
+    }
+  }
+
   void moveBat(DragUpdateDetails update) {
-    setState(() {
+    safeSetState(() {
       batPosition += update.delta.dx;
     });
+  }
+
+  void safeSetState(Function function) {
+    if (mounted && controller!.isAnimating) {
+      setState(() => function());
+    }
   }
 }
