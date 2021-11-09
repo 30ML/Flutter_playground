@@ -8,9 +8,16 @@ class HttpHelper {
   final String urlUpcoming = '/upcoming?';
   final String urlLanguage = '&language=ko-KR';
 
-  Future<String?> getUpcoming() async {
+  Future<String> getUpcoming() async {
     final Uri upcoming = (urlBase + urlUpcoming + urlKey + urlLanguage) as Uri;
+    print('uri: $Uri');
     http.Response result = await http.get(upcoming);
-    return (result.statusCode == HttpStatus.ok) ? result.body : null;
+    if (result.statusCode == HttpStatus.ok) {
+      print('OK');
+      return result.body;
+    } else {
+      print('NOT FOUND');
+      return 'no data';
+    }
   }
 }
