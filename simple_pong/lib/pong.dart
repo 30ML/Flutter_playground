@@ -49,6 +49,13 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    controller!.dispose();
+
+    super.dispose();
+  }
+
   void checkBorders() {
     if (posX <= 0 && hDir == Direction.left) {
       hDir = Direction.right;
