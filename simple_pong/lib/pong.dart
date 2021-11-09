@@ -22,6 +22,7 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
   double increment = 5; // 증분 - 공의 속도
   double randX = 1;
   double randY = 1;
+  int score = 0;
 
   Direction vDir = Direction.down;
   Direction hDir = Direction.right;
@@ -51,17 +52,8 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
       });
       checkBorders();
     });
-
     controller!.forward();
-
     super.initState();
-  }
-
-  @override
-  void dispose() {
-    controller!.dispose();
-
-    super.dispose();
   }
 
   @override
@@ -72,26 +64,36 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
       width = constraints.maxWidth;
       batWidth = width / 5; // 부모 위젯 height의 1/5
       batHeight = height / 20; // 부모 위젯 width의 1/20
-
       return Stack(
         children: [
           Positioned(
-            child: Ball(),
-            top: posY,
-            left: posX,
+            top: 0,
+            right: 24,
+            child: Text('Score: ${score.toString()}'),
           ),
           Positioned(
+            top: posY,
+            left: posX,
+            child: Ball(),
+          ),
+          Positioned(
+            bottom: 0,
+            left: batPosition,
             child: GestureDetector(
               onHorizontalDragUpdate: (DragUpdateDetails update) =>
                   moveBat(update),
               child: Bat(batWidth, batHeight),
             ),
-            bottom: 0,
-            left: batPosition,
           ),
         ],
       );
     });
+  }
+
+  @override
+  void dispose() {
+    controller!.dispose();
+    super.dispose();
   }
 
   void checkBorders() {
@@ -110,9 +112,12 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
           posX <= (batPosition + batWidth + diameter)) {
         vDir = Direction.up;
         randY = randomNumber();
+        setState(() {
+          score += 1;
+        });
       } else {
         controller!.stop();
-        dispose();
+        showMessage(context);
       }
     }
     if (posY <= 0 && vDir == Direction.up) {
@@ -129,13 +134,47 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
 
   void safeSetState(Function function) {
     if (mounted && controller!.isAnimating) {
-      setState(() => function());
+      setState(() {
+        function();
+      });
     }
   }
 
   double randomNumber() {
     var randNum = Random().nextInt(101);
-
     return (50 + randNum) / 100; // 0.5 ~ 1.5
+  }
+
+  void showMessage(context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Game Over'),
+          content: const Text('Would you like to play again?'),
+          actions: [
+            TextButton(
+              child: const Text('Yes'),
+              onPressed: () {
+                setState(() {
+                  posX = 0;
+                  posY = 0;
+                  score = 0;
+                });
+                Navigator.of(context).pop();
+                controller!.repeat();
+              },
+            ),
+            TextButton(
+              child: const Text('No'),
+              onPressed: () {
+                Navigator.of(context).pop();
+                dispose();
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 }
