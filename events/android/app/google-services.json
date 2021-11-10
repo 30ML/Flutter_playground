@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:502790746214:android:621a50a8dd1aedd88a3da7",
+        "mobilesdk_app_id": "1:502790746214:android:425a9e575789ecd98a3da7",
         "android_client_info": {
-          "package_name": "it.softwarehouse.evnets_example"
+          "package_name": "it.softwarehouse.events"
         }
       },
       "oauth_client": [
@@ -29,6 +29,13 @@
             {
               "client_id": "502790746214-0rusf9iiq2r7fvgsj76edjql3e6lsb5s.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "502790746214-2k40323bq66imm8klkvhbgof7q0dsu4a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "it.softwarehouse.evnets-example"
+              }
             }
           ]
         }
