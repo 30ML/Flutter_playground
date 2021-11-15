@@ -1,0 +1,35 @@
+name: noto_sans_korean
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  get: ^4.3.8
+  google_fonts: ^2.1.0
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+  fonts:
+    - family: NotoSansKR
+      fonts:
+        - asset: assets/NotoSansKR-Black.otf
+        - asset: assets/NotoSansKR-Bold.otf
+        - asset: assets/NotoSansKR-Light.otf
+        - asset: assets/NotoSansKR-Medium.otf
+        - asset: assets/NotoSansKR-Regular.otf
+        - asset: assets/NotoSansKR-Thin.otf
