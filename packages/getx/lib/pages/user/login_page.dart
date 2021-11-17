@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx/components/custom_elevated_button.dart';
 import 'package:getx/components/custom_text_form_field.dart';
+import 'package:getx/pages/post/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -34,7 +36,8 @@ class LoginPage extends StatelessWidget {
         children: [
           CustomTextFormField(hint: 'Username'),
           CustomTextFormField(hint: 'Password'),
-          CustomElevatedButton(text: '로그인'),
+          CustomElevatedButton(
+              text: '로그인', pageRoute: () => Get.to(HomePage())),
         ],
       ),
     );

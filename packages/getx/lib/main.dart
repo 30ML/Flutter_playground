@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx/pages/post/home_page.dart';
 import 'package:getx/pages/user/join_page.dart';
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       // 라우트 설계 필요 없음(GetX 사용 예정)
       home: JoinPage(),
     );
