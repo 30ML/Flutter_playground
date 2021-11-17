@@ -14,7 +14,7 @@ class JoinPage extends StatelessWidget {
               height: 300,
               alignment: Alignment.center,
               child: Text(
-                '회원 가입 화면',
+                '회원 가입 페이지',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
