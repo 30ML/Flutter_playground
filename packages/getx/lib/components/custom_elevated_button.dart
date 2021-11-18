@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final String text;
-  final pageRoute;
+  final funcPageRoute;
 
-  const CustomElevatedButton({required this.text, this.pageRoute});
+  const CustomElevatedButton({required this.text, this.funcPageRoute});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class CustomElevatedButton extends StatelessWidget {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
       child: Text('$text'),
-      onPressed: pageRoute,
+      onPressed: funcPageRoute,
     );
   }
 }

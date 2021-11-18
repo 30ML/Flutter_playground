@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String hint;
+  final funcValidator;
 
-  const CustomTextFormField({required this.hint});
+  const CustomTextFormField({required this.hint, this.funcValidator});
 
   @override
   Widget build(BuildContext context) {
