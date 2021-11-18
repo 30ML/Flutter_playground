@@ -15,7 +15,7 @@ class JoinPage extends StatelessWidget {
             Container(
               height: 300,
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 '회원 가입 페이지',
                 style: TextStyle(
                   fontSize: 30,
@@ -34,9 +34,9 @@ class JoinPage extends StatelessWidget {
     return Form(
       child: Column(
         children: [
-          CustomTextFormField(hint: 'Username'),
-          CustomTextFormField(hint: 'Password'),
-          CustomTextFormField(hint: 'Email'),
+          const CustomTextFormField(hint: 'Username'),
+          const CustomTextFormField(hint: 'Password'),
+          const CustomTextFormField(hint: 'Email'),
           CustomElevatedButton(
               text: '회원 가입', pageRoute: () => Get.to(LoginPage())),
         ],

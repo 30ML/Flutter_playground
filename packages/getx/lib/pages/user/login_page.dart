@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
             Container(
               height: 300,
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 '로그인 페이지',
                 style: TextStyle(
                   fontSize: 30,
@@ -34,8 +34,8 @@ class LoginPage extends StatelessWidget {
     return Form(
       child: Column(
         children: [
-          CustomTextFormField(hint: 'Username'),
-          CustomTextFormField(hint: 'Password'),
+          const CustomTextFormField(hint: 'Username'),
+          const CustomTextFormField(hint: 'Password'),
           CustomElevatedButton(
               text: '로그인', pageRoute: () => Get.to(HomePage())),
         ],
