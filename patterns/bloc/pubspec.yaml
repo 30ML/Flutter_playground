@@ -1,4 +1,4 @@
-name: getx2
+name: bloc
 description: A new Flutter project.
 
 publish_to: "none"
@@ -13,9 +13,9 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.3.8
-  provider: ^6.0.1
 
 dev_dependencies:
+
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter

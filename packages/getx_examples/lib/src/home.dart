@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx2/src/pages/normal/first_page.dart';
+import 'package:getx2/src/pages/simple_state_manage_page.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -59,6 +60,12 @@ class Home extends StatelessWidget {
               child: const Text('GetX Argument Passing(2) - 동적 URL'),
               onPressed: () {
                 Get.toNamed('/user/374887301?name=jay&age=29');
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Simple State Management'),
+              onPressed: () {
+                Get.to(SimpleStateManagePage());
               },
             ),
           ],
