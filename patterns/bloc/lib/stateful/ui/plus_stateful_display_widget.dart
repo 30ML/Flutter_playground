@@ -17,7 +17,7 @@ class _PlusStatefulDisplayWidgetState extends State<PlusStatefulDisplayWidget> {
       appBar: AppBar(
         title: const Text('General Stateful'),
       ),
-      body: Container(),
+      body: CountViewStateless(count: count),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -38,6 +38,23 @@ class _PlusStatefulDisplayWidgetState extends State<PlusStatefulDisplayWidget> {
             },
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CountViewStateless extends StatelessWidget {
+  int count;
+
+  CountViewStateless({Key? key, required this.count}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    print('CountViewStateless Build!!');
+    return Center(
+      child: Text(
+        count.toString(),
+        style: const TextStyle(fontSize: 80),
       ),
     );
   }
