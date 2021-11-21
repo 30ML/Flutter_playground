@@ -1,6 +1,7 @@
+import 'package:bloc/bloc_pattern/bloc/count_bloc.dart';
 import 'package:flutter/material.dart';
 
-CountBloc countBloc;
+CountBloc? countBloc;
 
 class BlocDisplayWidget extends StatefulWidget {
   const BlocDisplayWidget({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _BlocDisplayWidgetState extends State<BlocDisplayWidget> {
   @override
   void dispose() {
     super.dispose();
-    countBloc.dispose();
+    countBloc!.dispose();
   }
 
   @override
@@ -34,7 +35,8 @@ class _BlocDisplayWidgetState extends State<BlocDisplayWidget> {
           IconButton(
             icon: Icon(Icons.add),
             onPressed: () {
-              countBloc.countEventBloc.countEventSink.add(CountEvent.Add_EVENT);
+              countBloc!.countEventBloc.countEventSink
+                  .add(CountEvent.Add_EVENT);
             },
           ),
           IconButton(
