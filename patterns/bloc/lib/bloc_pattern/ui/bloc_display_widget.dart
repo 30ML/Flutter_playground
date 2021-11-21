@@ -33,6 +33,12 @@ class _BlocDisplayWidgetState extends State<BlocDisplayWidget> {
         children: [
           IconButton(
             icon: Icon(Icons.add),
+            onPressed: () {
+              countBloc.countEventBloc.countEventSink.add(CountEvent.Add_EVENT);
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.remove),
             onPressed: () {},
           ),
         ],
