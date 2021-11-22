@@ -15,11 +15,32 @@ class TodoDb {
   // _singleton이라는 static private TodoDb 객체를 만듦
   TodoDb._internal();
 
-  /* _singleton 객체를 반환할 factory 생성자 생성 */
+  /* _singleton 객체를 반환할 factory 생성자 */
   // 일반 생성자 -> 현재 클래스의 새 인스턴스를 반환
   // 팩토리 생성자 -> 현재 클래스의 단일 인스턴스만 반환할 수 있음
   //               싱글톤에서 팩토리 생성자가 자주 사용되는 이유
   factory TodoDb() {
     return _singleton;
+  }
+
+  /* DatabaseFactory 객체 생성 */
+  // 1. DatabaseFactory 생성
+  DatabaseFactory dbFactory = databaseFactoryIo;
+
+  final store = intMapStoreFactory.store('todos');
+
+  Database? _database;
+
+  Future<Database> get database async {
+    if (_database == null) {
+      await _openDb().then((db) {
+        _database = db;
+      });
+    }
+    return _database!;
+  }
+
+  Future _openDb() async {
+    final docsPath = await getApplicationDocumentsDirectory()
   }
 }
