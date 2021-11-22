@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:getx2/src/home.dart';
+import 'package:getx_examples/src/home.dart';
 
 class SecondNamedPage extends StatelessWidget {
   const SecondNamedPage({Key? key}) : super(key: key);

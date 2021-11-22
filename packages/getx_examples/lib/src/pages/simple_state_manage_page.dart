@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx2/src/pages/state/with_getx.dart';
-import 'package:getx2/src/pages/state/with_provider.dart';
+import 'package:getx_examples/src/pages/state/with_getx.dart';
+import 'package:getx_examples/src/pages/state/with_provider.dart';
 
 class SimpleStateManagePage extends StatelessWidget {
   const SimpleStateManagePage({Key? key}) : super(key: key);

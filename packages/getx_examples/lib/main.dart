@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx2/src/home.dart';
-import 'package:getx2/src/pages/named/first_named_page.dart';
-import 'package:getx2/src/pages/named/second_named_page.dart';
-import 'package:getx2/src/pages/next_page.dart';
-import 'package:getx2/src/pages/user_page.dart';
+import 'package:getx_examples/src/home.dart';
+import 'package:getx_examples/src/pages/named/first_named_page.dart';
+import 'package:getx_examples/src/pages/named/second_named_page.dart';
+import 'package:getx_examples/src/pages/next_page.dart';
+import 'package:getx_examples/src/pages/user_page.dart';
 
 void main() => runApp(MyApp());
 
