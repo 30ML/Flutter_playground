@@ -4,7 +4,7 @@ class CountControllerWithProvider extends ChangeNotifier {
   int count = 0;
 
   void increase() {
-    count++;
+    count += 1;
     notifyListeners();
   }
 }

@@ -63,7 +63,7 @@ class Home extends StatelessWidget {
               },
             ),
             ElevatedButton(
-              child: const Text('Simple State Management'),
+              child: const Text('Simple State Management: 단순 상태 관리'),
               onPressed: () {
                 Get.to(SimpleStateManagePage());
               },

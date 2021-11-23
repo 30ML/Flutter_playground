@@ -1,3 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class CountControllerWithGetX extends ChangeNotifier {}
+class CountControllerWithGetX extends GetxController {
+  int count = 0;
+
+  void increase() {
+    count += 1;
+    update();
+  }
+}
