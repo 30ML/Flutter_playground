@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.getx_movie_app">
+    package="com.example.getx_youtube_clone">
    <application
-        android:label="getx_movie_app"
+        android:label="getx_youtube_clone"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

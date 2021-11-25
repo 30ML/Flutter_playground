@@ -1,6 +1,6 @@
 {
-    "name": "getx_movie_app",
-    "short_name": "getx_movie_app",
+    "name": "getx_youtube_clone",
+    "short_name": "getx_youtube_clone",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

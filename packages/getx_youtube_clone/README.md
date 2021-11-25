@@ -1,4 +1,4 @@
-# getx_movie_app
+# getx_youtube_clone
 
 A new Flutter project.
 
