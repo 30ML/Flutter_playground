@@ -22,6 +22,6 @@ class _VideoPageState extends State<VideoPage> {
   }
 
   buildBottomNavigationMenu(context, landingPageController) {
-    return Obx(() => MediaQuery(child: ));
+    
   }
 }
