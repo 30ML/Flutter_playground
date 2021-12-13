@@ -22,6 +22,24 @@ class _VideoPageState extends State<VideoPage> {
   }
 
   buildBottomNavigationMenu(context, landingPageController) {
-    
+    return Obx(() => MediaQuery(
+      data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+      child: SizedBox(
+        height: 54,
+        child: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Container(
+                margin: EdgeInsets.only(bottom: 7),
+                child: Icon(Icons.home),
+              )
+            )
+          ],
+          showUnselectedLabels: true,
+          showSelectedLabels: true,
+
+        ),
+      ),
+    ));
   }
 }
