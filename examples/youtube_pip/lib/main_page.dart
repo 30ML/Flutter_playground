@@ -13,7 +13,7 @@ class _VideoPageState extends State<VideoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Video Page'),
+        title: const Text('Video PIP Test'),
         centerTitle: true,
       ),
       body: Container(),

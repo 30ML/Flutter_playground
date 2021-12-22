@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:youtube_pip/video_player.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter PIP Demo',
+      title: 'Flutter PIP Test',
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
@@ -35,8 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-
-    // WidgetsBinding.instance!.addPostFrameCallback((_) => showOverlay());
   }
 
   @override
@@ -64,14 +63,30 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             SizedBox(height: 10),
             ElevatedButton.icon(
-              icon: Icon(Icons.visibility),
+              icon: Icon(Icons.visibility_off),
               label: Text('Hide Floating Widget'),
               onPressed: hideOverlay,
             ),
           ],
         ),
       ),
-      // bottomNavigationBar: buildNavigationBar(),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: 0,
+        onTap: (index) {
+          print(index);
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.video_camera),
+            label: 'Video',
+          ),
+        ],
+      ),
     );
   }
 
