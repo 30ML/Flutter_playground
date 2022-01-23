@@ -5,8 +5,10 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
+    // SizeConfig().init(context);
 
-    return Container();
+    return Scaffold(
+      body: Body(),
+    );
   }
 }
