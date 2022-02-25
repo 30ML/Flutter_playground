@@ -39,11 +39,15 @@ class FirebaseApp extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FirebaseAppState createState() => _FirebaseAppState();
+  _FirebaseAppState createState() => _FirebaseAppState(analytics, observer);
 }
 
 class _FirebaseAppState extends State<FirebaseApp> {
+  final FirebaseAnalytics analytics;
+  final FirebaseAnalyticsObserver observer;
   String _message = '';
+
+  _FirebaseAppState(this.analytics, this.observer);
 
   void setMessage(String message) {
     setState(() {
@@ -53,7 +57,7 @@ class _FirebaseAppState extends State<FirebaseApp> {
 
   Future<void> _sendAnalyticsEvent() async {
     // Analytics의 `logEvent`를 호출해 `test_event`라는 key로 data 저장.
-    await widget.analytics.logEvent(
+    await analytics.logEvent(
       name: 'test_event',
       parameters: <String, dynamic>{
         'string': 'hello flutter',
