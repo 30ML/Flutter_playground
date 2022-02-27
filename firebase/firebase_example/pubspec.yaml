@@ -13,8 +13,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  firebase_core: ^1.2.1
-  firebase_analytics: ^8.1.1
+  firebase_core: ^1.2.1 # Firebase Basic Package
+  firebase_analytics: ^8.1.1 # Firebase Analytics Package
+  firebase_database: ^7.1.0 # Firebase Database Package
 
 dev_dependencies:
   flutter_test:
